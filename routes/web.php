@@ -36,3 +36,7 @@ Route::post('/question', [App\Http\Controllers\QuestionController::class, 'store
 Route::get('/response', function () {
     return view('response');
 })->name('question.response');
+
+use App\Http\Controllers\DashboardController;
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
